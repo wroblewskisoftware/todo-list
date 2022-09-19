@@ -1,0 +1,39 @@
+.list__header {
+    background-color: white;
+    padding: 15px 20px;
+    font-size: 19px;
+    margin: 0 0 1px;
+    box-shadow: 1px 1px 10px 0px #CCC;
+}
+
+.list__contents {
+    background-color: white;
+    min-height: 55px;
+    margin: 0;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 0px #CCC;
+}
+
+.list__item {
+    list-style: none;
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+}
+
+.list__button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: green;
+    align-self: center;
+    justify-self: center;
+}
+
+.list__button--delete {
+    background-color: crimson;
+}
+
+.list__paragraph {
+    font-size: 16px;
+}
