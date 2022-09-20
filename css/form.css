@@ -14,15 +14,12 @@
     display: grid;
     grid-template-columns: 1fr 135px;
     grid-gap: 20px;
-    height: 85px;
 }
 
 @media (max-width: 767px) {
     .form__form {
         grid-template-columns: 1fr;
         grid-gap: 10px;
-        align-items: start;
-        height: 130px;
     }
 }
 
@@ -36,7 +33,7 @@
     background-color: teal;
     color: white;
     padding: 10px;
-    border: none;
+    border: 2px solid teal;
     font-size: 15px;
 }
 
