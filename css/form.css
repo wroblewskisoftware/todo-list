@@ -12,14 +12,17 @@
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px 0px #CCC;
     display: grid;
-    grid-template-columns: 1fr 130px;
+    grid-template-columns: 1fr 135px;
     grid-gap: 20px;
+    height: 85px;
 }
 
 @media (max-width: 767px) {
     .form__form {
         grid-template-columns: 1fr;
         grid-gap: 10px;
+        align-items: start;
+        height: 130px;
     }
 }
 
@@ -35,4 +38,9 @@
     padding: 10px;
     border: none;
     font-size: 15px;
+}
+
+.form__button:active {
+    border: 2px solid black;
+    border-radius: 3px;
 }

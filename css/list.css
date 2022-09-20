@@ -30,6 +30,11 @@
     justify-self: center;
 }
 
+.list__button:active {
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
 .list__button--delete {
     background-color: crimson;
 }
