@@ -1,16 +1,16 @@
 {
   const tasks = [
     {
-      content: "odrobić lekcje",
+      content: "zrobić pracę domową",
       done: false,
     },
     {
-      content: "wstawić pracę do sprwdzenia",
+      content: "dopracować pracę domową",
       done: false,
     },
     {
-      content: "dopracować pracę",
-      done: true,
+      content: "wstawić pracę domową do sprwdzenia",
+      done: false,
     },
   ];
 
@@ -57,11 +57,9 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li
-        ${task.done ? "class = list__item--done" : ""}
-        >
+        <li class="list__item ${task.done ? "list__item--done" : ""}">
         <button class="list__button js-done"></button>
-        ${task.content}
+        <p class="list__paragraph">${task.content}</p>
         <button class="list__button list__button--remove js-remove"></button>
         </li>
         `;
