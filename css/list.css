@@ -21,15 +21,12 @@
     grid-template-columns: 60px 1fr 60px;
 }
 
-.list__item--done {
-    text-decoration: line-through;
-}
-
 .list__button {
     height: 30px;
     width: 30px;
     border: none;
     background-color: green;
+    color: white;
     align-self: center;
     justify-self: center;
 }
@@ -45,4 +42,8 @@
 
 .list__paragraph {
     font-size: 16px;
+}
+
+.list__paragraph--done {
+    text-decoration: line-through;
 }
