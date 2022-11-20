@@ -14,6 +14,10 @@
     },
   ];
 
+  const autofocus = () => {
+    document.querySelector(".js-newTask").focus();
+  };
+  
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
@@ -72,6 +76,8 @@
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+
+    autofocus();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
