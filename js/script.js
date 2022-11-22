@@ -17,13 +17,17 @@
   const autofocus = () => {
     document.querySelector(".js-newTask").focus();
   };
-  
+
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
     });
 
     render();
+  };
+
+  const formReset = () => {
+    document.querySelector(".js-form").reset();
   };
 
   const toggleTaskDone = (index) => {
@@ -86,6 +90,8 @@
     }
 
     addNewTask(newTaskContent);
+
+    formReset();
   };
 
   const init = () => {
