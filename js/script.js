@@ -1,27 +1,16 @@
 {
-  const tasks = [
-    {
-      content: "zrobić pracę domową",
-      done: false,
-    },
-    {
-      content: "dopracować pracę domową",
-      done: false,
-    },
-    {
-      content: "wstawić pracę domową do sprwdzenia",
-      done: false,
-    },
-  ];
+  const welcome = () => {
+    console.log("Hello world.");
+  };
+
+  const tasks = [];
 
   const autofocus = () => {
     document.querySelector(".js-newTask").focus();
   };
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
+    tasks.push({ content: newTaskContent });
 
     render();
   };
@@ -32,11 +21,13 @@
 
   const toggleTaskDone = (index) => {
     tasks[index].done = !tasks[index].done;
+
     render();
   };
 
   const removeTask = (index) => {
     tasks.splice(index, 1);
+
     render();
   };
 
@@ -95,6 +86,8 @@
   };
 
   const init = () => {
+    welcome();
+
     render();
 
     const form = document.querySelector(".js-form");
