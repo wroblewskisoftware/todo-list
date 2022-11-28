@@ -5,7 +5,7 @@
 
   const tasks = [];
 
-  const autofocus = () => {
+  const setInputFocus = () => {
     document.querySelector(".js-newTask").focus();
   };
 
@@ -72,7 +72,7 @@
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    autofocus();
+    setInputFocus();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
