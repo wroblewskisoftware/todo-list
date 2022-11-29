@@ -8,7 +8,7 @@ https://wroblewski82.github.io/todo-list/
 
 ## Description
 
-The todo-list app is a simple but very practical project that was created for the youcode course. It was based on pure JS. Includes ES6+ features: const, blocks, and arrow functions. I don't use more advanced solutions, instead when writing code I put special emphasis on the use of accepted conventions and good practices.
+The todo-list app is a simple but very practical project that was created for the youcode course. It was based on pure JS. Includes ES6+ features: const, let, blocks, and arrow functions. I don't use more advanced solutions, instead when writing code I put special emphasis on the use of accepted conventions and good practices.
 
 The correctness of my work is supervised by [Krzysztof Dąbrowski](https://www.linkedin.com/in/dabrowskisoftware) - an experienced Senior Software Engineer.
 
