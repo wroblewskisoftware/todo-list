@@ -3,14 +3,17 @@
     console.log("Hello world.");
   };
 
-  const tasks = [];
+  let tasks = [];
 
   const setInputFocus = () => {
     document.querySelector(".js-newTask").focus();
   };
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({ content: newTaskContent });
+    tasks = [
+      ...tasks,
+      { content: newTaskContent },        
+    ];
 
     render();
   };
@@ -25,8 +28,11 @@
     render();
   };
 
-  const removeTask = (index) => {
-    tasks.splice(index, 1);
+  const removeTask = (removedTaskIndex) => {
+    tasks = [
+      ...tasks.slice(0, removedTaskIndex),
+      ...tasks.slice(removedTaskIndex + 1),
+    ];
 
     render();
   };
