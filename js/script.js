@@ -10,10 +10,7 @@
   };
 
   const addNewTask = (newTaskContent) => {
-    tasks = [
-      ...tasks,
-      { content: newTaskContent },        
-    ];
+    tasks = [...tasks, { content: newTaskContent }];
 
     render();
   };
@@ -23,7 +20,14 @@
   };
 
   const toggleTaskDone = (index) => {
-    tasks[index].done = !tasks[index].done;
+    tasks = tasks.map((task, taskIndex) =>
+      taskIndex === index
+        ? {
+            ...task,
+            done: !task.done,
+          }
+        : task
+    );
 
     render();
   };
