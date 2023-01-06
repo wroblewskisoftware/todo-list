@@ -1,5 +1,5 @@
 .form__header {
-    background-color: white;
+    background-color: #ffffff;
     padding: 15px 20px;
     margin: 0 0 1px;
     box-shadow: 1px 1px 10px 0px #CCC;
@@ -7,7 +7,7 @@
 }
 
 .form__form {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px 0px #CCC;
@@ -26,22 +26,27 @@
 .form__input {
     padding: 8px;
     font-size: 15px;
-    border: 2px solid rgb(230, 230, 230);
+    border: 2px solid #e6e6e6;
 }
 
 .form__button {
-    background-color: teal;
-    color: white;
+    background-color: #008080;
+    color: #ffffff;
     padding: 10px;
-    border: 2px solid teal;
+    border: 2px solid #008080;
     font-size: 15px;
-}
-
-.form__button:active {
-    border: 2px solid black;
-    border-radius: 3px;
+    transition: background 0.5s, transform 0.5s;
 }
 
 .form__button:hover {
     cursor: pointer;
+    background-color: #009999;
+    border: 2px solid #009999;
+    transform: scale(1.1);
+}
+
+.form__button:active {
+    background-color: #00b3b3;
+    border: 2px solid #000000;
+    border-radius: 3px;
 }

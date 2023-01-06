@@ -1,22 +1,22 @@
 .list__header {
-    background-color: white;
+    background-color: #ffffff;
     padding: 15px 20px;
     font-size: 19px;
     margin: 0 0 1px;
-    box-shadow: 1px 1px 10px 0px #CCC;
+    box-shadow: 1px 1px 10px 0px #cccccc;
 }
 
 .list__contents {
-    background-color: white;
+    background-color: #ffffff;
     min-height: 55px;
     margin: 0;
     padding: 20px;
-    box-shadow: 1px 1px 10px 0px #CCC;
+    box-shadow: 1px 1px 10px 0px #cccccc;
 }
 
 .list__item {
     list-style: none;
-    border-bottom: 1px solid hsl(0, 0%, 85%);
+    border-bottom: 1px solid #d9d9d9;
     display: grid;
     grid-template-columns: 60px 1fr 60px;
 }
@@ -25,23 +25,34 @@
     height: 30px;
     width: 30px;
     border: none;
-    background-color: green;
+    background-color: #008000;
     color: white;
     align-self: center;
     justify-self: center;
-}
-
-.list__button:active {
-    border: 2px solid black;
-    border-radius: 3px;
+    transition: background 0.5s;
 }
 
 .list__button:hover {
     cursor: pointer;
+    background-color: #009900;
+}
+
+.list__button:active {
+    background-color: #00b300;
+    border: 2px solid #000000;
+    border-radius: 3px;
 }
 
 .list__button--remove {
-    background-color: crimson;
+    background-color: #db143c;
+}
+
+.list__button--remove:hover {
+    background-color: #ea1f48
+}
+
+.list__button--remove:active {
+    background-color: #ec365b
 }
 
 .list__paragraph {
