@@ -29,7 +29,7 @@
     color: white;
     align-self: center;
     justify-self: center;
-    transition: background 0.5s;
+    transition: background 0.3s;
 }
 
 .list__button:hover {

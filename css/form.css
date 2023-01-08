@@ -12,7 +12,7 @@
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px 0px #CCC;
     display: grid;
-    grid-template-columns: 1fr 135px;
+    grid-template-columns: 1fr auto;
     grid-gap: 20px;
 }
 
@@ -35,7 +35,7 @@
     padding: 10px;
     border: 2px solid #008080;
     font-size: 15px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .form__button:hover {
