@@ -7,11 +7,7 @@ html {
 }
 
 body {
-    max-width: 850px;
-    margin: 0 auto;
-    background-color: rgb(230, 230, 230);
-    padding: 20px;
     font-family: "Montserrat", sans-serif;
-    line-height: 1.5;
+    background-color: #e6e6e6;
     word-break: break-word;
 }
