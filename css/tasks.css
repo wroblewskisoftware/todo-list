@@ -45,6 +45,7 @@
 }
 
 .tasks__button--remove:hover {
+    cursor: pointer;
     background-color: #ea1f48;
 }
 
