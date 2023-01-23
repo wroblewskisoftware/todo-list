@@ -15,11 +15,24 @@
     border: 1px solid #e6e6e6;
 }
 
+@media (max-width: 767px) {
+    .form__input {
+        font-size: 17px;
+    }
+}
+
 .form__button {
     padding: 10px;
     background-color: #008080;
     color: #ffffff;
     border: 2px solid #008080;
+    transition: background 0.3s, transform 0.3s;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        font-size: 17px;
+    }
 }
 
 .form__button:hover {
@@ -27,6 +40,12 @@
     background-color: #009999;
     border: 2px solid #009999;
     transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .form__button:hover {
+        transform: none;
+    }
 }
 
 .form__button:active {
