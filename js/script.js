@@ -62,10 +62,10 @@
   };
 
   const renderTasks = () => {
-    let htmlString = "";
+    let tasksString = "";
 
     for (const task of tasks) {
-      htmlString += `
+      tasksString += `
         <li class="tasks__item">
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
           ${task.done ? "✔" : ""}
@@ -80,10 +80,21 @@
         `;
     }
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = tasksString;
   };
 
-  const renderButtons = () => {};
+  const renderButtons = () => {
+    let buttonsString = "";
+
+    if (tasks.length !== 0) {
+      buttonsString = `
+          <button class="section__button">Pokarz ukończone</button>
+          <button class="section__button">Ukończ wszystkie</button>
+          `;
+    }
+
+    document.querySelector(".js-buttons").innerHTML = buttonsString;
+  };
 
   const render = () => {
     renderTasks();
