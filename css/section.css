@@ -12,6 +12,7 @@
 .section__headerContainer--grid {
     display: grid;
     grid-template-columns: 1fr auto;
+    grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
@@ -29,9 +30,15 @@
     padding: 20px;
 }
 
+.section__buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
 @media (max-width: 767px) {
     .section__buttons {
-        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -42,12 +49,6 @@
     background-color: #ffffff;
     color: #008080;
     transition: color 0.3s;
-}
-
-@media (max-width: 767px) {
-    .section__button {
-        margin-top: 20px;
-    }
 }
 
 .section__button:hover {
