@@ -4,6 +4,7 @@
   };
 
   let tasks = [];
+  let hideDoneTasks = false;
 
   const setInputFocus = () => {
     document.querySelector(".js-newTask").focus();
@@ -61,20 +62,44 @@
     });
   };
 
+  const hideAllDoneTasks = () => {
+    hideDoneTasks = !hideDoneTasks;
+
+    render();
+  };
+
+  const bindHideAllDoneTasksEvents = () => {
+    const hideAllDoneTasksButton = document.querySelector(
+      ".js-hideAllDoneTasks"
+    );
+
+    if (hideAllDoneTasksButton !== null) {
+      hideAllDoneTasksButton.addEventListener("click", () => {
+        hideAllDoneTasks();
+      });
+    }
+  };
+
   const renderTasks = () => {
     let tasksString = "";
 
     for (const task of tasks) {
       tasksString += `
-        <li class="tasks__item">
+        <li class="tasks__item ${task.done && hideDoneTasks === true 
+            ? "tasks__item--hidden" 
+            : ""}">
           <button class="tasks__button tasks__button--toggleDone js-toggleDone">
-          ${task.done ? "✔" : ""}
+            ${task.done 
+              ? "✔" 
+              : ""}
           </button>
-          <span class="tasks__content ${task.done ? "tasks__content--done" : ""}">
-          ${task.content}
+          <span class="tasks__content ${task.done 
+              ? "tasks__content--done" 
+              : ""}">
+            ${task.content}
           </span>
           <button class="tasks__button tasks__button--remove js-remove">
-          🗑
+            🗑
           </button>
         </li>
         `;
@@ -88,7 +113,11 @@
 
     if (tasks.length !== 0) {
       buttonsString = `
-          <button class="section__button">Pokarz ukończone</button>
+          <button class="section__button js-hideAllDoneTasks">
+            ${hideDoneTasks === false 
+              ? "Ukryj" 
+              : "Pokaż"} ukończone
+          </button>
           <button class="section__button">Ukończ wszystkie</button>
           `;
     }
@@ -102,6 +131,7 @@
 
     bindToggleDoneEvents();
     bindRemoveEvents();
+    bindHideAllDoneTasksEvents();
   };
 
   const onFormSubmit = (event) => {
