@@ -80,6 +80,24 @@
     }
   };
 
+  const toggleAllTasksDone = (tasks) => {
+    tasks = tasks.map((task) => (task.done = true));
+
+    render();
+  };
+
+  const bindToggleAllTasksDoneEvents = () => {
+    const toggleAllTasksDoneButton = document.querySelector(
+      ".js-toggleAllTasksDone"
+    );
+
+    if (toggleAllTasksDoneButton !== null) {
+      toggleAllTasksDoneButton.addEventListener("click", () => {
+        toggleAllTasksDone(tasks);
+      });
+    }
+  };
+
   const renderTasks = () => {
     let tasksString = "";
 
@@ -118,7 +136,7 @@
               ? "Ukryj" 
               : "Pokaż"} ukończone
           </button>
-          <button class="section__button">Ukończ wszystkie</button>
+          <button class="section__button js-toggleAllTasksDone">Ukończ wszystkie</button>
           `;
     }
 
@@ -132,6 +150,7 @@
     bindToggleDoneEvents();
     bindRemoveEvents();
     bindHideAllDoneTasksEvents();
+    bindToggleAllTasksDoneEvents();
   };
 
   const onFormSubmit = (event) => {
