@@ -53,9 +53,9 @@
 
 .section__button:hover {
     cursor: pointer;
-    color: #009999;
+    color: #00cccc;
 }
 
-.section__button:active {
-    color: #00b3b3;
+.section__button:disabled {
+    color: #bebebe;
 }
