@@ -23,15 +23,15 @@
     document.querySelector(".js-form").reset();
   };
 
-  const toggleTaskDone = (index) => {
-    tasks = tasks.map((task, taskIndex) =>
-      taskIndex === index
-        ? {
-            ...task,
-            done: !task.done,
-          }
-        : task
-    );
+  const toggleTaskDone = (taskIndex) => {
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      {
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done,
+      },
+      ...tasks.slice(taskIndex + 1),
+    ];
 
     render();
   };
