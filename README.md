@@ -4,7 +4,7 @@
 
 ## Demo
 
-https://wroblewski82.github.io/todo-list/
+https://wroblewskisoftware.github.io/todo-list/
 
 ## Description
 
